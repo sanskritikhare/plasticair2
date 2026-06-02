@@ -34,4 +34,4 @@ animate_feritile_country(
 )
 ```
 
-This function will animate fertility rate over time for the Philippines. The x-axis will show year, the y-axis will show fertility rate, and the dashed line will represent the replacement rate of 2.1 births per woman.
+This function will animate fertility rate over time for the Philippines. The x-axiss will show year, the y-axis will show fertility rate, and the dashed line will represent the replacement rate of 2.1 births per woman.
