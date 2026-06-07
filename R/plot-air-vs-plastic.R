@@ -11,6 +11,21 @@
 #'
 #' @export
 plot_air_vs_plastic <- function(air_vs_plastic_clean) {
+
+  if (!is.data.frame(air_vs_plastic_clean)) {
+    stop("`air_vs_plastic_clean` must be a data frame.", call. = FALSE)
+  }
+
+  validate_cols(
+    air_vs_plastic_clean,
+    required = c("country", "total_plastic", "avg_aqi"),
+    arg_name = "air_vs_plastic_clean"
+  )
+
+  if (nrow(air_vs_plastic_clean) == 0) {
+    stop("`air_vs_plastic_clean` has no rows.", call. = FALSE)
+  }
+
   air_vs_plastic_clean |>
     dplyr::mutate(aqi_category = dplyr::case_when(
       avg_aqi <= 50  ~ "Good",
@@ -18,8 +33,14 @@ plot_air_vs_plastic <- function(air_vs_plastic_clean) {
       avg_aqi <= 150 ~ "Unhealthy for Sensitive Groups",
       TRUE           ~ "Unhealthy"
     )) |>
-    ggplot2::ggplot(ggplot2::aes(x = total_plastic, y = avg_aqi,
-                                 size = total_plastic, color = aqi_category)) +
+    ggplot2::ggplot(
+      ggplot2::aes(
+        x = total_plastic,
+        y = avg_aqi,
+        size = total_plastic,
+        color = aqi_category
+      )
+    ) +
     ggplot2::geom_point(alpha = 0.7) +
     ggrepel::geom_text_repel(
       ggplot2::aes(label = country),
