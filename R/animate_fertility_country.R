@@ -1,4 +1,3 @@
-
 #' Animate Fertility Rate Over Time
 #'
 #' Creates an animated line plot showing fertility rate over time for the
@@ -15,9 +14,9 @@
 #'
 #' @examples
 #' \dontrun{
-#'   animate_fertility_country(merged_data)
+#'   animate_fertility_country(load_data())
 #' }
-animate_fertility_country <- function(combined) {
+animate_fertility_country <- function(combined = load_data()) {
   validate_cols(
     combined,
     required = c("country"),
