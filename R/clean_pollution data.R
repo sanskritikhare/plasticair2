@@ -15,7 +15,6 @@
 #' @examples
 #' dat <- load_data()
 #' clean_pollution_data(dat)
-#'
 clean_pollution_data <- function(dat) {
 
   validate_cols(

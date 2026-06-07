@@ -21,5 +21,4 @@ and filtering out extreme outliers in total plastic waste using the IQR rule.
 \examples{
 dat <- load_data()
 clean_pollution_data(dat)
-
 }
