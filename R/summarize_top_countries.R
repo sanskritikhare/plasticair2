@@ -1,4 +1,3 @@
-
 #' Summarize Top Countries by Plastic Waste
 #'
 #' Returns a formatted table of the top N countries ranked by total plastic

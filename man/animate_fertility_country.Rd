@@ -4,7 +4,7 @@
 \alias{animate_fertility_country}
 \title{Animate Fertility Rate Over Time}
 \usage{
-animate_fertility_country(combined)
+animate_fertility_country(combined = load_data())
 }
 \arguments{
 \item{combined}{A merged data frame containing \code{country} and fertility year
@@ -18,7 +18,5 @@ Creates an animated line plot showing fertility rate over time for the
 Philippines. The dashed horizontal line shows the replacement rate.
 }
 \examples{
-\dontrun{
-  animate_fertility_country(merged_data)
-}
+  animate_fertility_country(load_data())
 }

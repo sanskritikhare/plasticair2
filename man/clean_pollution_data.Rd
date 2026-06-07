@@ -19,8 +19,7 @@ Cleans the merged pollution dataset by removing rows with missing key values
 and filtering out extreme outliers in total plastic waste using the IQR rule.
 }
 \examples{
-\dontrun{
 dat <- load_data()
 clean_pollution_data(dat)
-}
+
 }

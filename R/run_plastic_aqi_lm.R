@@ -22,10 +22,9 @@ utils::globalVariables(c("total_plastic", "avg_aqi", "estimate", "std_error", "s
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #'   model <- run_plastic_aqi_lm(air_vs_plastic_clean)
 #'   model <- run_plastic_aqi_lm(air_vs_plastic_clean, log_transform = TRUE)
-#' }
+#'
 run_plastic_aqi_lm <- function(air_vs_plastic, log_transform = FALSE) {
   validate_cols(
     air_vs_plastic,

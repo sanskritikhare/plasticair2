@@ -21,7 +21,5 @@ Creates a small table showing total plastic waste and average AQI for one
 selected country.
 }
 \examples{
-\dontrun{
   summarize_country_pollution(air_vs_plastic_clean, country_name = "Philippines")
-}
 }

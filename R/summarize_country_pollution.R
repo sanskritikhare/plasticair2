@@ -17,9 +17,7 @@ utils::globalVariables(c("country", "total_plastic", "avg_aqi"))
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #'   summarize_country_pollution(air_vs_plastic_clean, country_name = "Philippines")
-#' }
 summarize_country_pollution <- function(air_vs_plastic, country_name = "Philippines") {
   validate_cols(
     air_vs_plastic,

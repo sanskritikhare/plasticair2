@@ -13,9 +13,8 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #'   animate_fertility_country(load_data())
-#' }
+
 animate_fertility_country <- function(combined = load_data()) {
   validate_cols(
     combined,
