@@ -7,7 +7,8 @@
 animate_fertility_country(combined)
 }
 \arguments{
-\item{combined}{A data frame containing year and fertility_rate columns.}
+\item{combined}{A merged data frame containing \code{country} and fertility year
+columns such as \code{1960}, \code{1961}, and later years.#'}
 }
 \value{
 An animated GIF showing fertility rate over time.
@@ -15,4 +16,9 @@ An animated GIF showing fertility rate over time.
 \description{
 Creates an animated line plot showing fertility rate over time for the
 Philippines. The dashed horizontal line shows the replacement rate.
+}
+\examples{
+\dontrun{
+  animate_fertility_country(merged_data)
+}
 }
